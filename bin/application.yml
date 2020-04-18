@@ -18,15 +18,15 @@ environments:
             dbCreate: update
             driverClassName:  'com.mysql.cj.jdbc.Driver'
             url: jdbc:mysql://localhost/pickflix
-            username: csilva
-            password: Newpwd&11894
+            username: pickflix_admin
+            password: PickflixAdmin&2020
     mysql:
         dataSource:
             dbCreate: update
             driverClassName:  'com.mysql.cj.jdbc.Driver'
-            url: jdbc:mysql://${mysql_host:192.168.0.183}:${mysql_port:3306}/${mysql_db:pickflix}
-            username: ${mysql_user:csilva}
-            password: ${mysql_password:Password&2020&CS}
+            url: jdbc:mysql://${mysql_host:192.168.0.105}:${mysql_port:3306}/${mysql_db:pickflix}
+            username: ${mysql_user:pickflix_admin}
+            password: ${mysql_password:Pickflix&2020}
     test:
         dataSource:
             dbCreate: update
@@ -35,9 +35,9 @@ environments:
         dataSource:
             dbCreate: update
             driverClassName:  'com.mysql.cj.jdbc.Driver'
-            url: jdbc:mysql://192.168.0.183/pickflix
-            username: csilva
-            password: Password&2020&CS
+            url: jdbc:mysql://192.168.0.105/pickflix
+            username: pickflix_admin
+            password: PickflixAdmin&2020
             properties:
                 jmxEnabled: true
                 initialSize: 5
