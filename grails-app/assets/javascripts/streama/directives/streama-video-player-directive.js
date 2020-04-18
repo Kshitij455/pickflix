@@ -44,7 +44,7 @@ angular.module('streama').directive('streamaVideoPlayer', [
         $scope.isInitialized = false;
         $scope.isNextVideoShowing = false;
         $scope.loading = true;
-        $scope.initialPlay = true;
+        $scope.initialPlay = false;
 
         if (!$scope.options.isExternalLink) {
           $http.head(videoSrc)
@@ -434,7 +434,7 @@ angular.module('streama').directive('streamaVideoPlayer', [
           if(videoTime){
             $scope.options.customStartingTime = videoTime;
           }
-          $scope.initialPlay = true;
+          $scope.initialPlay = false;
           $scope.options.selectedVideoFile = videoFile;
           $scope.options.videoSrc = $sce.trustAsResourceUrl(videoFile.src || videoFile.externalLink);
           $scope.options.originalFilename = videoFile.originalFilename;
@@ -503,7 +503,7 @@ angular.module('streama').directive('streamaVideoPlayer', [
             });
           }
         }
-
+        
         function openPlaybackOptions() {
           $scope.pause();
           modalService.openPlaybackOptions($scope.options).then(function (response) {
