@@ -197,6 +197,24 @@ class DefaultDataService {
             required: false,
             validationRequired: false
         ],
+		[
+            settingsKey: 'Hide Help/FAQ section',
+            name: 'hide_help_faq',
+            description: 'Determines whether the help/faq section should be displayed for the users',
+            settingsType: 'boolean',
+            value: 'false',
+            required: false,
+            validationRequired: false
+        ],
+		[
+            settingsKey: 'Hide Dashboard Header-links',
+            name: 'hide-dash-sections',
+            description: 'Determines whether the the top Dashboard Links \'Tv Shows\', \'Movies\' and \'My List\' should be hidden',
+            settingsType: 'boolean',
+            value: 'false',
+            required: false,
+            validationRequired: false
+        ],
 //        [
 //            settingsKey: 'Remove Source After Convert',
 //            value: 'yes',
