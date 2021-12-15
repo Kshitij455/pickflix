@@ -1,3 +1,6 @@
+tasks.create("stage") {
+   dependsOn("installDist")
+}
 buildscript {
     ext {
         grailsVersion = project.grailsVersion
@@ -13,8 +16,6 @@ buildscript {
         classpath "org.grails.plugins:views-gradle:1.0.12"
     }
 }
-
-task stage(dependsOn: [':subproject:gradle/wrapper/'])
 
 version "1.9.0"
 group "streama"
