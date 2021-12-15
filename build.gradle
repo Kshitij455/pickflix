@@ -158,3 +158,5 @@ bootRun {
 grails {
   pathingJar = true
 }
+task stage(dependsOn: 'bootJar') {
+}
