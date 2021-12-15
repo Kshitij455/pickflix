@@ -14,7 +14,6 @@ buildscript {
     }
 }
 
-task stage(dependsOn: [':subproject:stage'])
 
 version "1.9.0"
 group "streama"
