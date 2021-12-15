@@ -29,7 +29,7 @@ services:
     networks:
       - net-backend
     expose:
-      - 8080
+      - 3000
     volumes:
       - $HOME/movies:/data/streama # Change to your video folder
       - app_data:/app/streama
