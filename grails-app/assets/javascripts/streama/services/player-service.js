@@ -38,6 +38,29 @@ angular.module('streama').factory('playerService',
       onVideoClick: angular.noop,
       onEditVideo: angular.noop
     };
+     var video = document.getElementById('video');
+
+    function playM3u8(externalLink){
+      if(Hls.isSupported()) {
+        video.volume = 0.3;
+        var hls = new Hls();
+        var m3u8Url = decodeURIComponent(externalLink)
+        hls.loadSource(m3u8Url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+          video.play();
+       });
+        document.title = url
+     }
+	      else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+		            video.src = url;
+		            video.addEventListener('canplay',function() {
+		              video.play();
+		            });
+		            video.volume = 0.3;
+		            document.title = url;
+  	    }
+   }       
 
     return {
       getVideoOptions: function()
