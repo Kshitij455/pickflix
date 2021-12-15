@@ -1,6 +1,3 @@
-tasks.create("stage") {
-   dependsOn("installDist")
-}
 buildscript {
     ext {
         grailsVersion = project.grailsVersion
