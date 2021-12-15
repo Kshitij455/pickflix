@@ -13,9 +13,9 @@ buildscript {
         classpath "org.grails.plugins:views-gradle:1.0.12"
     }
 }
-tasks.create("stage") {
-    dependsOn("installDist")
-}
+
+task stage(dependsOn: [':subproject:stage'])
+
 version "1.9.0"
 group "streama"
 
