@@ -52,7 +52,7 @@ services:
     networks:
       - net-backend
     ports:
-      - "80:80"
+      - "3000"
     volumes:
       - proxy_reverse_data:/etc/nginx
       - proxy_reverse_data_log:/var/log/nginx
