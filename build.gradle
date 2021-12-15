@@ -14,6 +14,7 @@ buildscript {
     }
 }
 
+task stage(dependsOn: [':subproject:gradle/wrapper/'])
 
 version "1.9.0"
 group "streama"
